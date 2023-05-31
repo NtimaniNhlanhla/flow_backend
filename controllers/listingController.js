@@ -6,7 +6,16 @@ const Listing = require('../models/ListingModel');
 // @access Public
 exports.getAllListings = asyncHandler( async (req, res) => {
 
-    const listings =  await Listing.find();
+    const listings =  await Listing.aggregate([
+        { $lookup:
+            {
+               from: "organisations",
+               localField: "organisation",
+               foreignField: "_id",
+               as: "organisation"
+            }
+        }
+    ]);
 
     res.status(200).json(listings);
 })
