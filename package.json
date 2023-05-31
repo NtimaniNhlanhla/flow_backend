@@ -1,0 +1,27 @@
+{
+  "name": "flow_backend",
+  "version": "1.0.0",
+  "description": "Flow backend project that will allow for querying property listings, and potentially showing them in a simple frontend user interface",
+  "main": "server.js",
+  "scripts": {
+    "start": "SET NODE_ENV=production & node server",
+    "dev": "nodemon server"
+  },
+  "author": "Nhlanhla Ntimani",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-async-handler": "^1.2.0",
+    "express-mongo-sanitize": "^2.2.0",
+    "helmet": "^7.0.0",
+    "hpp": "^0.2.3",
+    "mongoose": "^7.2.1",
+    "morgan": "^1.10.0",
+    "xss-clean": "^0.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
